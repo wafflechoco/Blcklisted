@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blcklisted Auto Accessories - Service Form</title>
+    <link rel="stylesheet" href="ServiceRequestStyle.css">
+    <link rel="stylesheet" href="WarningModal.css">
+    <link rel="stylesheet" href="ConfirmationModal.css">
+    <link href="https://fonts.googleapis.com/css2?family=Alumni+Sans:wght@300&family=Didact+Gothic&display=swap"
+        rel="stylesheet">
+
+    <style>
+        .third-bar {
+            display: flex;
+            justify-content: center; /* Centers horizontally */
+            align-items: center; /* Centers vertically */
+            background-color: #e0e0e0;
+            border-radius: 5px;
+            width: 100%;
+            padding-right: 50px;
+            margin: 0;
+        }
+
+        .one {
+            background-color: rgb(255, 255, 255);
+            display: flex;
+            justify-content:start;
+            width: 500px;
+            height: 45px;
+            border-radius: 5px;
+            margin: 0;
+            box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.185);
+        }
+
+        .form-container {
+            background-color: #e0e0e0;
+            padding: 50px;
+            width: 65%;
+            min-height: 80%; /* Ensures the height grows with content */
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 0;
+            border-radius: 10px;
+            overflow: hidden; /* Hides any overflow content if needed */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.829);
+        }
+
+
+        .form-wrapper {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            background-color: transparent; /* Ensure it's transparent to show the background */
+            width: 100%;
+            height: calc(100vh - 70px);
+            margin-top: 70px;
+            position: relative;
+            z-index: 1;
+        }
+
+        body{
+            padding-top: 200px;
+            padding-bottom: 200px;
+            background-image: url('img/bgdarken.png');/* Add the path to your image */
+            background-size: cover; /* Ensures the image covers the entire screen */
+            background-position: center; /* Centers the image */
+            background-attachment: fixed; /* Keeps the background fixed while scrolling */
+        }
+
+
+        .third-bar .one textarea {
+            font-family: 'Didact Gothic', sans-serif;
+            width: 100%;            /* Ensure it takes full width of the parent container */
+            max-width: 700px;       /* Limit the width to 700px as specified */
+            height: 100%;           /* Let the height adjust to the content */
+            word-wrap: break-word;  /* Wrap long words to the next line */
+            border: none;           /* Remove the border */
+            outline: none;          /* Remove outline (focus border) */
+            padding: 10px;          /* Optional: Add some padding for better text spacing */
+            box-sizing: border-box; /* Ensures padding is included in the element's width/height calculation */
+            font-size: 17px;
+            padding-right: 50px;
+            padding-left: 25px;
+        }
+
+
+
+
+
+
+    </style>
+
+
+</head>
+
+<body>
+
+    <header class="header">
+        <img src="img/newlogo-white.png" class="logo">
+        <nav>
+            <ul class="nav-links">
+                <li><a href="dashboard.php" id="home-link"><- Return to Home Page</a></li>
+            </ul>
+        </nav>
+        <a href="#request" class="request-service"><img src="img/request icon.png" class="req-icon">Request a
+            Service</a>
+    </header>
+
+    <main>
+        <form id="service-form" >
+            <div class="form-wrapper">
+                <div class="form-container">
+
+                    <div class="form-section customer-info">
+                        <h2>Car Details</h2>
+
+                        <div class="third-bar">
+                            <div class="one">
+                                <img src="img/car-regular-24.png" alt="Car Icon" class="FirstG">
+                                <input type="text" name="model" placeholder="Vehicle Model & Year" required>
+                            </div>
+                        </div>
+                        <div class="third-bar">
+                            <div class="one">
+                                <img src="img/numeric.png" alt="Car Icon" class="SecondG">
+                                <input type="text" name="plateNumber" placeholder="License Plate Number" required>
+                            </div>
+                        </div>
+                        <div class="third-bar">
+                            <div class="one">
+                                <img src="img/key.png" alt="Car Icon" class="SecondG">
+                                <input type="text" name="VIN" placeholder="Vehicle identification Number" required>
+                            </div>
+                        </div>
+
+
+                        <hr />
+
+                        <div class="form-section service-option">
+                            <h2>Service Option</h2>
+                            <div class="options-container" style="box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.185);">
+                                <div class="options-group">
+                                    <h3>Accessory Installation</h3>
+                                    <label><input type="checkbox" name="services[]" value="SRV01"> Window
+                                        Tinting</label><br>
+                                    <label><input type="checkbox" name="services[]" value="SRV02"> Car Audio
+                                        Systems</label><br>
+                                    <label><input type="checkbox" name="services[]" value="SRV03"> LED
+                                        Lighting Kits</label><br>
+                                    <label><input type="checkbox" name="services[]" value="SRV04">
+                                        GPS & Navigation Systems</label><br>
+                                    <label><input type="checkbox" name="services[]" value="SRV05"> Dash
+                                        Cams & Security</label>
+                                </div>
+
+                                <hr />
+
+                                <div class="options-group">
+                                    <h3>Customization Services</h3>
+                                    <label><input type="checkbox" name="services[]" value="SRV06"> Custom
+                                        Upholstery</label><br>
+                                    <label><input type="checkbox" name="services[]" value="SRV07"> Paint &
+                                        Wraps</label><br>
+                                    <label><input type="checkbox" name="services[]" value="SRV08"> Body
+                                        Kits</label><br>
+                                    <label><input type="checkbox" name="services[]" value="SRV09">
+                                        Performance Upgrades</label><br>
+                                    <label><input type="checkbox" name="services[]" value="SRV10"> Wheels &
+                                        Rims</label>
+                                </div>
+
+                                <hr />
+
+                                <div class="options-group">
+                                    <h3>Maintenance Services</h3>
+                                    <label><input type="checkbox" name="services[]" value="SRV11">
+                                        Detailing</label><br>
+                                    <label><input type="checkbox" name="services[]" value="SRV12"> Oil
+                                        Change</label><br>
+                                    <label><input type="checkbox" name="services[]" value="SRV13"> Brake
+                                        Check</label><br>
+                                    <label><input type="checkbox" name="services[]" value="SRV14"> Battery
+                                        Replacement</label><br>
+                                    <label><input type="checkbox" name="services[]" value="SRV15"> Tire
+                                        Rotation</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <hr />
+
+                        <div class="form-section appointment-preferences">
+                            <h2>Appointment Preferences</h2>
+                            <div class="first-bar">
+                                <div class="one" style="margin-right: 10px;">
+                                    <img src="img/calendar-regular-24.png" alt="Calendar Icon" class="FirstG">
+                                    <input type="date" name="date" placeholder="Preferred Date" required min="" id="appointment-date">
+
+                                </div>
+                                <div class="one" style="margin-left: 10px;">
+                                    <img src="img/time-regular-24.png" alt="Time Icon" class="SecondG">
+                                    <select name="time" required>
+                                        <option value="" disabled selected>Select Time</option>
+                                        <option value="8:00 AM">8:00 AM</option>
+                                        <option value="9:00 AM">9:00 AM</option>
+                                        <option value="10:00 AM">10:00 AM</option>
+                                        <option value="11:00 AM">11:00 AM</option>
+                                        <option value="12:00 PM">12:00 PM</option>
+                                        <option value="1:00 PM">1:00 PM</option>
+                                        <option value="2:00 PM">2:00 PM</option>
+                                        <option value="3:00 PM">3:00 PM</option>
+                                        <option value="4:00 PM">4:00 PM</option>
+                                        <option value="5:00 PM">5:00 PM</option>
+                                    </select>
+                                </div>
+                            </div>
+                                
+                                <div class="third-bar">
+                                    <div class="one" style="width: 700px; height: 200px; padding-top: 20px;">
+                                        <textarea name="instruction" placeholder="Instructions or preferences for the service/s" required></textarea>
+                                </div>
+                            </div>
+                    </div>
+                </div>
+
+                <hr />
+
+                <div class="form-section terms-agreement">
+                    <h2>Terms and Agreement</h2>
+                    <label>
+                        <input type="checkbox" id="terms-checkbox" required> I confirm that the information provided is
+                        accurate and agree to Blcklisted Auto Accessories’ terms of service.
+                    </label>
+                    <button type="submit" name="send" id="submit-btn" class="submit-btn" disabled>Submit Now</button>
+                </div>
+
+            </div>
+        </form>
+    </main>
+
+    <div id="modal" class="modal-overlay">
+        <div class="modal-content">
+            <img src="img/warning icon.png" alt="Warning Icon" class="warning-icon">
+            <div class="modal-title">Changes will not be saved!</div>
+            <div class="modal-text">Are you sure you want to leave this page? Your changes will not be saved.</div>
+            <div class="modal-buttons">
+                <button class="modal-button yes" id="confirm-leave">YES</button>
+                <button class="modal-button no" id="cancel-leave">NO</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="confirmation-modal" class="modal">
+        <div class="modal-content">
+            <img src="img/confirmed icon.png" alt="Success Icon" class="success-icon">
+            <div class="modal-title">Form Submitted!</div>
+            <div class="modal-text">Please wait while we confirm your booking. We will send you an email shortly.</div>
+            <div class="modal-buttons">
+                <button id="okay-button" class="modal-button">Okay</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+
+        
+
+    document.addEventListener('DOMContentLoaded', function () {
+        // Set the minimum date for the appointment
+        const today = new Date().toISOString().split('T')[0];
+        document.getElementById('appointment-date').setAttribute('min', today);
+
+        const homeLink = document.getElementById('home-link');
+        const warningModal = document.getElementById('modal'); // Modal for navigation warning
+        const confirmLeaveButton = document.getElementById('confirm-leave');
+        const cancelLeaveButton = document.getElementById('cancel-leave');
+        const termsCheckbox = document.getElementById('terms-checkbox');
+        const submitButton = document.getElementById('submit-btn');
+        const serviceForm = document.getElementById('service-form');
+
+        // Warning modal logic for navigating away
+        homeLink.addEventListener('click', (event) => {
+            event.preventDefault(); // Prevent default navigation
+            warningModal.style.display = 'flex'; // Show the modal
+        });
+
+        confirmLeaveButton.addEventListener('click', () => {
+            window.location.href = 'dashboard.php'; // Redirect on confirmation
+        });
+
+        cancelLeaveButton.addEventListener('click', () => {
+            warningModal.style.display = 'none'; // Close modal on cancel
+        });
+
+        // Enable or disable the submit button based on terms and conditions checkbox
+        termsCheckbox.addEventListener('change', () => {
+            submitButton.disabled = !termsCheckbox.checked; // Enable only when checked
+        });
+
+        // Form submission with validation
+        serviceForm.addEventListener('submit', function (e) {
+            e.preventDefault(); // Prevent default form submission for custom validation
+
+            // Validate minimum date
+            const appointmentDate = document.getElementById('appointment-date').value;
+            if (appointmentDate < today) {
+                alert('Please select a valid appointment date.');
+                return; // Halt submission if the date is invalid
+            }
+
+            // Validate service checkboxes
+            const serviceCheckboxes = document.querySelectorAll('input[name="services[]"]');
+            const isChecked = Array.from(serviceCheckboxes).some(checkbox => checkbox.checked);
+
+            if (!isChecked) {
+                alert('Please select at least one service.');
+                return; // Halt submission if no checkbox is selected
+            }
+
+            // All validations passed, proceed with submission
+            const formData = new FormData(this);
+
+            // Process form via fetch
+            fetch('process_form_logged.php', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.text())
+            .then(text => {
+                try {
+                    const data = JSON.parse(text);
+                    if (data.status === 'error') {
+                        alert('process_form_logged.php Error: ' + data.errors.join('\n'));
+                    } else {
+                        console.log('process_form_logged.php Response: Success');
+                    }
+                } catch (e) {
+                    alert('Error: The response is not valid JSON.');
+                }
+            })
+            .catch(error => {
+                alert('An error occurred with process_form_logged.php: ' + error);
+            });
+
+            // Send data via fetch to send.php
+            fetch('send.php', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.status === 'error') {
+                    alert('send.php Error: ' + data.errors.join('\n'));
+                } else {
+                    console.log('send.php Response: Success');
+                    document.getElementById('confirmation-modal').style.display = 'flex'; // Show confirmation modal
+                }
+            })
+            .catch(error => {
+                alert('An error occurred with send.php: ' + error);
+            });
+        });
+
+        // Close confirmation modal and redirect
+        document.getElementById('okay-button').addEventListener('click', function () {
+            document.getElementById('confirmation-modal').style.display = 'none';
+            window.location.href = 'dashboard.php'; // Redirect to dashboard
+        });
+    });
+
+    </script>
+
+</body>
+
+</html>

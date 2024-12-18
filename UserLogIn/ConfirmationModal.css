@@ -1,0 +1,63 @@
+/* Modal Styling */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8); /* Black background with opacity */
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: #d1d1d1; /* Light gray background */
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 400px;
+}
+
+/* Icon Styling */
+.success-icon {
+    width: 80px;
+    margin-bottom: 20px;
+}
+
+/* Modal Title Styling */
+.modal-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* Modal Text Styling */
+.modal-text {
+    font-size: 1rem;
+    margin-bottom: 20px;
+}
+
+/* Button Styling */
+.modal-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.modal-button {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+
+.modal-button:hover {
+    background-color: #555;
+}

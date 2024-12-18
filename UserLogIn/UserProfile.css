@@ -1,0 +1,155 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: Arial, sans-serif;
+}
+
+.blacklisted-background {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.account-info-container {
+  width: 50%;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 10px;
+  margin-bottom: 60px;
+}
+
+.header h1 {
+  font-size: 24px;
+  margin: 0;
+}
+
+.return-home {
+  color: #555;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.return-home:hover {
+  text-decoration: underline;
+}
+
+.profile {
+  display: flex;
+  align-items: left;
+  margin-bottom: 60px;
+  margin-left: 20px;
+}
+
+.profile-img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: #ddd;
+  margin-bottom: 10px;
+}
+
+.profile-details p {
+  margin-top: 10px;
+  margin-left: 20px;
+  font-size: 16px;
+}
+
+.account-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.form-column {
+  width: 32%;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-column label {
+ width: 100px;
+ display: flex;
+justify-content: left;
+}
+
+.account-form label {
+  font-size: 0.85rem;
+  color: #555;
+  margin-bottom: 5px;
+}
+
+.account-form input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+input:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+.save-btn {
+  margin-top: 20px;
+  width: 20%;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  background-color: #555;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  margin-left: 75%;
+}
+
+.save-btn:hover {
+  background-color: #333;
+}
+
+@media (max-width: 768px) {
+  .account-info-container {
+    width: 90%;
+  }
+
+  .form-row {
+    flex-direction: column;
+    align-items: right;
+  }
+
+  .form-column {
+    width: 100%;
+  }
+}
+
+#bg-image {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+  pointer-events: none;
+  opacity: 0.9;
+}
